@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css"
+    href="{{ url_for('static', filename='calculator.css') }}"/>
+</head>
+<body>
+    <h2>Mini Student Extranet</h2>
+    <form method="post" action="{{ url_for('details') }}" id="student_form">
+        {% if logged_in %}
+        Hello, {{ username }}
+        Log out {% else %} Please login {% endif %}  
+        <label for="Input1">Please enter your full name</label>
+        <br/>
+        <input type="text" name="Input1" id="Input1">
+        <br/>
+        <label for="Input1">Please enter your ID number</label>
+        <br/>
+        <input type="Input2" name="Input2" id="Input2">
+        <br/>
+        <input type="submit" value="Submit" style="color: green;"/>
+        <input type="reset"  value="clear" style="color: red;"/>
+    </form>
+    
+{% if data_correct == True %}   
+    {% if result == 4 %}
+        <br/>
+        <form method="POST" action="{{ url_for('details2') }}" id="student_form2">
+            <label for="specialization">specialization</label>
+                <select id="specialization" name="specialization">
+                    <option  value="WDA">Web Development Application</option>
+                    <option  value="PMX">PM/UX</option>
+                </select>
+            <input type="submit" value="Submit" style="color: green;"/>
+        </form>
+    {% endif %}
+
+    {% if result == 3 %}
+        <h4>First year student entry page</h4>
+        <form method="POST" action="{{ url_for('details3') }}" id="student_form3">
+            <label for="sub">Dear {{input1}}, enter the the desired modules</label><br>
+            <input type="text" id="sub" name="sub" size="100"><br>
+            <input type="submit" value="Submit" style="color: green;"/>
+            <input type="reset"  value="clear" style="color: red;"/>
+          </form>
+          <label for="notify">Press comma after each entry</label><br>
+    {% endif %}
+{% endif %}
+
+{% if data_correct == False %}
+<br/>
+<p>{{error}}</p>
+<p>{{input1}} -  {{result}}</p>
+{% endif %}
+</body>
+<p style="color:blueviolet">Code by Marek</p>
+<p style="color:blueviolet">All rights reserved &copy;</p>
+</html>

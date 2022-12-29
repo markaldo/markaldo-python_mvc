@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h2>PHP Form</h2>
+    <form method="POST" action="">
+       Name:<input type="text" name="name" placeholder="name"><br>
+       Email:<input type="email" name="email" placeholder="example@hotmail.com"><br>
+       D.O.B: <input type="date" name="date"><br>
+       Favourite color:<input type="color" name="color"><br>
+       Website:<input type="text" name="web" placeholder="web"><br>
+       Gender:
+       <input type="radio" name="gender" value="female">Male
+       <input type="radio" name="gender" value="male">Female 
+       <br>
+       Vehicle type:<br>
+       <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+       <label for="vehicle1"> I have a bike</label><br>
+       <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+       <label for="vehicle2"> I have a car</label><br>
+       <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+       <label for="vehicle3"> I have a boat</label><br><br>
+       Rate your satisfaction out of 5<br><input type="number" name="number" min="1" max="5"><br>
+       Comment<br><textarea type="textarea" name="com" placeholder="comment" rows="4" cols="50"></textarea></br>
+       <input type="submit" name="submit" value="submit">
+    </form>
+
+<?php
+echo "<h2>Your Input</h2>";
+echo "<h4>NAME</h4>" . $_POST["name"]; 
+echo "<h4>EMAIL</h4>" . $_POST["email"];
+echo "<h4>DATE</h4>" . $_POST["date"];
+echo "<h4>COLOUR</h4>" . $_POST["color"];
+echo "<h4>WEBSITE</h4>" . $_POST["web"];
+echo "<h4>GENDER</h4>" . $_POST["gender"];
+echo "<h4>VEHICLE</h4>" . $_POST["vehicle"];
+echo "<h4>RATING</h4>" . $_POST["number"];
+echo "<h4>COMMENT</h4>" . $_POST["com"];
+?>
+</body>
+</html>
+
+
+
+

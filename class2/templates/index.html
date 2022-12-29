@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css"
+    href="{{ url_for('static', filename='calculator.css') }}"/>
+</head>
+<body>
+    <img src="{{url_for('static', filename='m.png')}}">
+    <p> SIMPLE CALCULATOR </p>
+    <form method="POST" action="{{ url_for('answer') }}" id="calculator_form">
+       <label for="num">Input1:</label>
+       <input type="text" name="num" id="num"><br/>
+       <label for="num2">Input2:</label>
+       <input type="num2" name="num2" id="num2"><br/>
+       <label for="operation">Operation</label>
+            <select id="operation" name="operation">
+                <option  value="*">multiply</option>
+                <option  value="/">divide</option>
+                <option  value="+">addition</option>
+                <option  value="-">subtract</option>
+                <option  value="%">modulus</option>
+            </select>
+            <br/>
+        <button type="submit" value="submit">calculate</button>
+        <input type="reset" value="RESET" style="color: red;"/>
+    </form>
+    {% if calculation_success == True %}
+        <br/>
+        <p>The calculation for {{num}} {{operation}} {{num2}} is: {{result}}</p>
+    {% endif %}
+    {% if calculation_success == False %}
+        <br/>
+        <p>{{error}}</p>
+        <p>{{num}} {{operation}} {{num2}} = "{{result}}"</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/DBN-20.0/DBNavigator/lib/dbn.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBN-20.0/DBNavigator/lib/lombok.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBN-20.0/DBNavigator/lib/jsch-0.1.55.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBN-20.0/DBNavigator/lib/poi-ooxml-schemas-3.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBN-20.0/DBNavigator/lib/dom4j-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBN-20.0/DBNavigator/lib/poi-ooxml-3.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBN-20.0/DBNavigator/lib/ojdbc8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBN-20.0/DBNavigator/lib/xdb.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBN-20.0/DBNavigator/lib/xmlparserv2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBN-20.0/DBNavigator/lib/poi-3.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DBN-20.0/DBNavigator/lib/xmlbeans-2.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

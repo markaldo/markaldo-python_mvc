@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{background-color: rgb(238, 237, 237);
+     font-size: large;
+     }
+ </style>
+</head>
+<body>
+<h5>Crosscheck, is that all?</h5>
+{% for words in memo %}
+    <ul>&#128578;{{words}}</ul>
+    <ul><img src="static/uploads/{{ memo[words] }}" alt="{{file}}" width="300" height="300"></ul>
+    </br>
+{% endfor %}
+
+ </br>
+ <a href = '/edit'>edit</a></br>
+ <a href = '/logout'>log out</a></b>
+</body>
+</html>

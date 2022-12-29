@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background: url("static/img/dark.jpg");
+       -webkit-background-size: cover;
+        background-repeat: none;
+        color: white;
+        font-size: x-large;
+        font-style: italic;}
+    </style>
+</head>
+<body>
+    <p>Hello, nice to have you back {{username}}!</p>
+    <h5>Your Personal Gallery and Notepage</h5>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="title">Title</label><br>
+        <input type="text" id="title" name="title"><br>
+        <input type="file" name="file" />
+        <input type="submit" name="submit" value="add" style="color: green;"/>
+        <input type="submit" name="submit" value="display" style="color: blue"/>
+        <input type="reset"  value="clear" style="color: red;"/>
+    </form>
+    <h6 style="color: green;">{{msg}}</h6>
+    <form action="/remove" method="POST">
+        <label for="remove">Enter title of memory to be removed</label><br>
+        <input type="text" id="remove" name="remove"><br>
+        <input type="submit" name="submit" value="remove" style="color: orangered;"/>
+    </form>
+    <body>
+    {% if reply == 4 %}
+        <h6 style="color: red;">{{dl}} note successfully deleted!</h6>
+    {% endif %} 
+    </br>
+    <a href = '/logout'  style="color: yellow;">click here to log out</a></b>
+</body>
+</html>
